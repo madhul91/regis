@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FinEmpire - Finance Website</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- ✅ EmailJS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+   <script src="script.js"></script>
+
+  <body class="bg-black text-white font-sans">
+    <!-- 🌟 Navbar -->
+    <header class="fixed top-0 left-0 w-full bg-black bg-opacity-80 backdrop-blur-md shadow-md z-50">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold text-yellow-500">FinEmpire</h1>
+        <nav class="space-x-6 hidden md:block">
+          <a href="#home" class="hover:text-yellow-500">Home</a>
+          <a href="#about" class="hover:text-yellow-500">About</a>
+          <a href="#services" class="hover:text-yellow-500">Services</a>
+          <a href="#team" class="hover:text-yellow-500">Team</a>
+          <a href="#contact" class="hover:text-yellow-500">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- 🏠 Hero Section -->
+    <section id="home" class="h-screen flex items-center justify-center bg-[url('https://images.unsplash.com/photo-1605902711622-cfb43c4437d3?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center relative">
+      <div class="absolute inset-0 bg-black/60"></div>
+      <div class="relative text-center z-10">
+        <h2 class="text-5xl font-bold mb-4 text-yellow-500">Grow Your Wealth Smartly</h2>
+        <p class="text-lg mb-6">Professional financial solutions for individuals & businesses.</p>
+        <a href="#contact" class="bg-yellow-500 text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition">Get Started</a>
+      </div>
+    </section>
+
+    <!-- 🧠 About Section -->
+    <section id="about" class="py-20 px-6 max-w-6xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <img src="https://images.unsplash.com/photo-1573164574392-3a8cbb0c827b?auto=format&fit=crop&w=900&q=60" alt="About" class="rounded-lg shadow-lg">
+        <div>
+          <h3 class="text-3xl font-bold text-yellow-500 mb-4">About Us</h3>
+          <p class="text-gray-300 mb-4">We are a team of passionate financial experts helping clients achieve their goals with smart strategies and personalized solutions.</p>
+          <p class="text-gray-400">Our mission is to provide transparent, growth-driven, and innovative financial services that empower individuals and businesses alike.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 💼 Services Section -->
+    <section id="services" class="py-20 bg-gray-900">
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <h3 class="text-3xl font-bold text-yellow-500 mb-10">Our Services</h3>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="p-6 bg-black rounded-lg shadow hover:scale-105 transition">
+            <h4 class="text-xl font-semibold mb-3">Investment Planning</h4>
+            <p class="text-gray-400">Customized investment strategies designed to maximize your financial growth.</p>
+          </div>
+          <div class="p-6 bg-black rounded-lg shadow hover:scale-105 transition">
+            <h4 class="text-xl font-semibold mb-3">Tax Consulting</h4>
+            <p class="text-gray-400">Smart tax planning to help you save money while staying compliant.</p>
+          </div>
+          <div class="p-6 bg-black rounded-lg shadow hover:scale-105 transition">
+            <h4 class="text-xl font-semibold mb-3">Wealth Management</h4>
+            <p class="text-gray-400">Comprehensive wealth solutions for high-net-worth individuals and families.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 👥 Team Section -->
+    <section id="team" class="py-20 px-6 max-w-6xl mx-auto text-center">
+      <h3 class="text-3xl font-bold text-yellow-500 mb-10">Meet Our Team</h3>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-gray-900 p-6 rounded-lg shadow">
+          <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Team" class="w-32 h-32 mx-auto rounded-full mb-4">
+          <h4 class="text-xl font-semibold">John Carter</h4>
+          <p class="text-gray-400">Financial Advisor</p>
+        </div>
+        <div class="bg-gray-900 p-6 rounded-lg shadow">
+          <img src="https://randomuser.me/api/portraits/women/47.jpg" alt="Team" class="w-32 h-32 mx-auto rounded-full mb-4">
+          <h4 class="text-xl font-semibold">Sophia Allen</h4>
+          <p class="text-gray-400">Investment Expert</p>
+        </div>
+        <div class="bg-gray-900 p-6 rounded-lg shadow">
+          <img src="https://randomuser.me/api/portraits/men/52.jpg" alt="Team" class="w-32 h-32 mx-auto rounded-full mb-4">
+          <h4 class="text-xl font-semibold">David Wilson</h4>
+          <p class="text-gray-400">Tax Consultant</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 📞 Contact Section -->
+    <section id="contact" class="py-20 bg-gray-900">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <h3 class="text-3xl font-bold text-yellow-500 mb-8">Contact Us</h3>
+        <form id="contactForm" class="grid gap-6 max-w-lg mx-auto">
+          <input type="text" id="name" placeholder="Your Name" required class="p-3 rounded bg-black text-white border border-gray-700">
+          <input type="email" id="email" placeholder="Your Email" required class="p-3 rounded bg-black text-white border border-gray-700">
+          <textarea id="message" rows="4" placeholder="Your Message" required class="p-3 rounded bg-black text-white border border-gray-700"></textarea>
+          <button type="submit" class="bg-yellow-500 text-black py-3 rounded font-semibold hover:bg-yellow-400 transition">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ⚫ Footer -->
+    <footer class="bg-black py-6 text-center border-t border-gray-800">
+      <p class="text-gray-400">© 2025 FinEmpire. All Rights Reserved.</p>
+    </footer>
+
+    <!-- ✅ EmailJS Script -->
+    
+   
+  </body>
+</html>
