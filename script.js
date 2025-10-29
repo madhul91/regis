@@ -37,8 +37,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
       // Prepare email parameters
       const params = {
-        from_name: document.getElementById("name").value,
-        from_email: document.getElementById("email").value,
+        user_name: document.getElementById("name").value,
+        user_email: document.getElementById("email").value,
         message: document.getElementById("message").value,
       };
 
@@ -58,3 +58,4 @@ document.addEventListener("DOMContentLoaded", function() {
     console.error("Form element not found!");
   }
 });
+
